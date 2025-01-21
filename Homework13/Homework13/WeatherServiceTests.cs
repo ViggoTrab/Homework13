@@ -10,7 +10,7 @@ namespace Homework13
         [Fact]
         public async Task GetWeatherData_ReturnsCorrectData()
         {
-            var mockApiClient = new Mock<WeatherApiClient2>();
+            var mockApiClient = new Mock<WeatherApiClient>();
 
             var mockWeatherResponse = new WeatherResponse
             {
@@ -30,7 +30,7 @@ namespace Homework13
         [Fact]
         public async Task GetWeatherData_ReturnsNoData()
         {
-            var mockApiClient = new Mock<WeatherApiClient2>();
+            var mockApiClient = new Mock<WeatherApiClient>();
 
             var mockWeatherResponse = new WeatherResponse
             {
@@ -50,7 +50,7 @@ namespace Homework13
         [Fact]
         public async Task GetWeatherData_ReturnsApiFail()
         {
-            var mockApiClient = new Mock<WeatherApiClient2>();
+            var mockApiClient = new Mock<WeatherApiClient>();
 
             mockApiClient.Setup(x => x.GetWeatherDataAsync("New York")).ThrowsAsync(new InvalidOperationException("API fail"));
 

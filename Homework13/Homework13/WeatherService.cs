@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Homework13
 {
-    public interface WeatherApiClient2
+    public interface WeatherApiClient
     {
         Task<WeatherResponse> GetWeatherDataAsync(string city);
     }
 
     public class WeatherService2
     {
-        private readonly WeatherApiClient2 _weatherApiClient;
+        private readonly WeatherApiClient _weatherApiClient;
 
-        public WeatherService2(WeatherApiClient2 weatherApiClient)
+        public WeatherService2(WeatherApiClient weatherApiClient)
         {
             _weatherApiClient = weatherApiClient;
         }
